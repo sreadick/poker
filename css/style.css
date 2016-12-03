@@ -1,0 +1,641 @@
+/* 
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+html {
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
+
+
+body {
+     
+     background: url("../images/black-wood-background.jpg");
+     background-size: 100% 100%;
+     font-family: monaco,Consolas,Lucida Console,monospace;
+     margin: 0;
+     height: 100%;
+     width: 100%;
+     padding-top: 300px;
+     
+     padding-top: 140px;
+     overflow: hidden;
+}
+h1 {
+     display:none;
+}
+
+#customized-colors {
+    position: absolute;
+    left: 1250px;
+    top: 30px;
+    visibility: hidden;
+}
+
+#customized-colors div {
+    height: 25px;
+    width: 25px;
+    float: left;
+    display: inline;
+    margin-left: 20px;
+}
+.backgrounds {
+    margin-top: 5px; 
+}
+
+.colors {   
+    margin-top: 13px;   
+    border-radius: 300px;
+}
+
+#dark-wood {
+    background: url("../images/black-wood-background.jpg");
+}
+
+#light-wood {
+    background-image: url("../images/light-wood-background.jpg");
+}
+
+#green-table {
+    background: radial-gradient(ellipse at center, rgba(0,120,70,1) 29%, rgba(0,120,70,1) 46%, rgba(0,85,30,1) 86%, rgba(0,85,30,1) 88%);
+    clear: left;
+}
+
+#red-table {
+    background: radial-gradient(ellipse at center, rgba(209,16,32,1) 29%, rgba(209,16,32,1) 46%, rgba(130,12,26,1) 86%, rgba(130,12,26,1) 88%);
+}
+
+#blue-table {
+    background: radial-gradient(ellipse at center, rgba(19,19,180,1) 29%, rgba(19,19,180,1) 46%, rgba(0,10,80,1) 86%, rgba(0,10,80,1) 88%);
+}
+
+#table {
+     width: 1120px;
+     height: 560px;
+     /*margin: 140px auto 50px auto;*/
+     margin: auto;
+    
+     border: 15px solid black;
+     border-radius: 600px;
+     background: -moz-radial-gradient(center, ellipse cover, rgba(209,16,32,1) 29%, rgba(209,16,32,1) 46%, rgba(130,12,26,1) 86%, rgba(130,12,26,1) 88%);
+     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(29%, rgba(209,16,32,1)), color-stop(46%, rgba(209,16,32,1)), color-stop(86%, rgba(130,12,26,1)), color-stop(88%, rgba(130,12,26,1)));
+     background: -webkit-radial-gradient(center, ellipse cover, rgba(209,16,32,1) 29%, rgba(209,16,32,1) 46%, rgba(130,12,26,1) 86%, rgba(130,12,26,1) 88%);
+     background: -o-radial-gradient(center, ellipse cover, rgba(209,16,32,1) 29%, rgba(209,16,32,1) 46%, rgba(130,12,26,1) 86%, rgba(130,12,26,1) 88%);
+     background: -ms-radial-gradient(center, ellipse cover, rgba(209,16,32,1) 29%, rgba(209,16,32,1) 46%, rgba(130,12,26,1) 86%, rgba(130,12,26,1) 88%);
+     background: radial-gradient(ellipse at center, rgba(0,120,70,1) 29%, rgba(0,120,70,1) 46%, rgba(0,85,30,1) 86%, rgba(0,85,30,1) 88%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d11020', endColorstr='#820c1a', GradientType=1 );
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     padding-bottom: 50px;
+}
+
+.players {
+     width: 300px;
+     height: 200px;
+     margin: -60px auto;
+     text-align: center;
+     position: relative;
+}
+
+#user {
+     top: 80px;
+}
+
+#dealer {
+     bottom: 80px;
+}
+
+#user .player-info {
+     margin-top: 50px;
+}
+
+#dealer .player-info {
+     margin-bottom: 55px;
+     vertical-align: bottom;
+}
+
+.player-info {
+     color: white;
+     font-weight: bold;
+     font-size: 18px;
+     background: #45484d; /* Old browsers */
+     background: -moz-linear-gradient(top, #303332 0%, #000000 32%); /* FF3.6-15 */
+     background: -webkit-linear-gradient(top, #303332 0%,#000000 32%); /* Chrome10-25,Safari5.1-6 */
+     background: linear-gradient(to bottom, #303332 0%,#000000 32%, );
+     border: .5px solid black;
+     border-radius: 7px;    
+     visibility: hidden;
+}
+
+.players h2{
+     margin: 0;
+     color: pink;
+}
+
+.players p{
+     margin: 0;
+}
+
+.cards img {
+     width: 66px;
+     height: 90px;
+     text-align: center;
+     margin: 0 2px;
+     position: relative;
+     visibility: hidden;
+}
+
+#user-card1 {
+     right: 153px;
+     top: -239px;
+}
+
+#user-card2 {
+     right: 233px;
+     top : -239px;
+     visibility: hidden;
+}
+
+#dealer-card1 {
+     right: 153px;
+     top: 214px;
+     visibility: hidden;
+}
+
+#dealer-card2 {
+     right: 233px;
+     top: 214px;
+     visibility: hidden;
+}
+
+.dealt {
+     -webkit-transition: top .37s linear, right .37s linear, bottom .37s linear, left .37s linear;
+     -moz-transition: top .37s linear, right .37s linear, bottom .37s linear, left .37s linear;
+     -ms-transition: top .37s linear, right .37s linear, bottom .37s linear, left .37s linear;
+     -o-transition: top .37s linear, right .37s linear, bottom .37s linear, left .37s linear;
+     transition: top .37s linear, right .37s linear, bottom .37s linear, left .37s linear;
+}
+
+#play-cards {   
+     
+     margin-top: 10px;
+     height: 100px;
+}
+
+#deck {
+     margin-left: 319px;
+     margin-right: 9px;
+     float: left;
+}
+#deck img {
+      width: 66px;
+     height: 90px;
+
+}
+
+#user .cards {
+    margin-bottom: 13px;
+}
+
+
+
+#com-cards * {
+     position: relative;
+     width: 66px;
+     height: 90px;
+     margin: 0 1px;
+     visibility: hidden;
+}
+
+#com-cards #card1 {
+     right: 91px;
+}
+
+#com-cards #card2 {
+     right: 179px;
+}
+
+#com-cards #card3 {
+     right: 268px;
+}
+
+#com-cards #card4 {
+     right: 356px;
+}
+
+#com-cards #card5 {
+     right: 444px;
+}
+
+.in-play {
+     -webkit-transition: right .3s;
+     -moz-transition: right .3s;
+     -ms-transition: right .3s;
+     -o-transition: right .3s;
+     transition: right .3s;
+}
+#pot {
+    margin-top: 13px;
+}
+#pot p {
+     color: pink;
+     font-weight: bold;
+     /*background: black;
+     border: 2px solid black;*/
+     border-radius: 7px;
+     /*width: 180px;
+     height: 43px;*/
+     margin: 0 auto;
+     margin-bottom: 13px;
+     text-align: center; 
+     padding: 10px 0;
+     visibility: hidden; 
+     height: 27px;  
+}
+#message {
+     font-family: Geneva,Tahoma,Verdana,sans-serif;
+     color: rgba(0, 0, 0, 1);
+     font-size: 20px;
+     height: 150px;
+     padding: 0px 10px;
+     margin: 10px auto 0 auto;
+     text-align: center;
+     visibility: hidden;
+     
+}
+
+.fade {
+     -webkit-animation: fade 1.25s;
+     -moz-animation: fade 1.25s;
+     -ms-animation: fade 1.25s;
+     -o-animation: fade 1.25s;
+     animation: fade 1.25s;
+}
+
+.add-funds {
+     -webkit-animation: bankroll-animation .5s;
+     -moz-animation: bankroll-animation .5s;
+     -ms-animation: bankroll-animation .5s;
+     -o-animation: bankroll-animation .5s;
+     animation: bankroll-animation .5s;
+}
+
+.add-funds-to-pot {
+     -webkit-animation: pot-animation .5s;
+     -moz-animation: pot-animation .5s;
+     -ms-animation: pot-animation .5s;
+     -o-animation: pot-animation .5s;
+     animation: pot-animation .5s;
+}
+
+#bet-options {
+     text-align: center;
+     height: 40px;
+     margin-bottom: 10px;
+}
+
+#bet-options button {
+     background: black;
+     border-radius: 200px;
+     border: 1px solid pink;
+     color: pink; 
+     margin: 5px;
+     width: 60px;
+     height: 30px;
+     font-size: 16px;
+     display: none;
+}
+#name-form-container {
+     width: 300px;
+     margin: auto;
+     text-align: center;
+     margin-top: -300px;
+}
+#name-form {
+     font-size: 17px;
+     margin-bottom: 8px;
+     color: pink;
+}
+#name-input {
+     margin-top: 5px;
+     border-radius: 5px;
+     background: black;
+     border-color: black;
+     color: green;
+}
+#name-submit {
+     display: inline;  
+     margin: 0 50px;
+     background: #bada55;
+     color: black;
+     border: 1px solid black;
+     width: 80px;
+     border-radius: 7px;
+}
+
+#play-again-container {
+    position: relative;
+    bottom: 20px;
+    margin: 40px auto -65px auto;
+    height: 75px;
+}
+
+#play-again-container > button {
+    background: black;
+    border-radius: 7px;
+    color: pink;
+    width: 120px;
+    height: 35px;
+    padding: 5px 10px;
+    font-size: 18px;
+    display: none;
+}
+
+button#yes, button#no {
+    color: rgb(0,150,70);
+}
+
+#bet-form {
+     padding-bottom: 0px;
+     padding-left: 20px;
+     position: relative;
+     visibility: hidden;
+}
+
+#bet-input {
+    background: black;
+    color: white;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+@media screen and (min-height: 800px) {
+    html {
+        padding-top: 50px;
+    }
+}
+@media print {
+     #message {page-break-after: always;}
+}
+
+@-webkit-keyframes fade {
+  0%   { opacity: 1; }
+  40%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-moz-keyframes fade {
+  0%   { opacity: 1; }
+  40%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-o-keyframes fade {
+  0%   { opacity: 1; }
+  40%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes fade {
+  0%   { opacity: 1; }
+  40%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+@-webkit-keyframes bankroll-animation {
+  0% { color: rgb(10, 200, 10); }
+  80% { color: rgb(10, 200, 10); }
+  100% { color: white; }
+}
+
+@-moz-keyframes bankroll-animation {
+  0% { color: rgb(10, 200, 10); }
+  80% { color: rgb(10, 200, 10); }
+  100% { color: white; }
+}
+
+@-o-keyframes bankroll-animation {
+  0% { color: rgb(10, 200, 10); }
+  80% { color: rgb(10, 200, 10); }
+  100% { color: white; }
+}
+
+@keyframes bankroll-animation {
+  0% { color: rgb(10, 200, 10); }
+  80% { color: rgb(10, 200, 10); }
+  100% { color: white; }
+}
+
+@-webkit-keyframes pot-animation {
+  0% { color: rgb(10, 200, 10); }
+  80% { color: rgb(10, 200, 10); }
+  100% { color: pink; }
+}
+
+@-moz-keyframes pot-animation {
+  0% { color: rgb(10, 200, 10); }
+  80% { color: rgb(10, 200, 10); }
+  100% { color: pink; }
+}
+
+@-o-keyframes pot-animation {
+  0% { color: rgb(10, 200, 10); }
+  80% { color: rgb(10, 200, 10); }
+  100% { color: pink; }
+}
+
+@keyframes pot-animation {
+  0% { color: rgb(10, 200, 10); }
+  80% { color: rgb(10, 200, 10); }
+  100% { color: pink; }
+}
+
+
+
+
+
+.chip-stack {  
+     /*display: none;
+     margin: auto;*/
+     height: 40px;
+     width: 298px;
+     position: absolute;
+     text-align: center;
+     padding-right: 22px;
+}
+
+.chip-stack > div {
+     /*display: none;*/
+    width: 25px;
+    height: 25px;
+    margin: 0 -2px;
+}
+
+.chip-stack img {
+    position: absolute;
+}
+
+#user-chips {
+    
+}
+
+#user-bet-chips {     
+     bottom: 260px;
+}
+
+#dealer-chips {
+     bottom: 90px;
+     margin-bottom: 5px;
+}
+
+#dealer-bet-chips {
+    bottom: -35px;
+}
+
+#pot-chips {
+    visibility: visible; 
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+
+#pot-chips2 {
+    visibility: hidden;
+    left: 641px;
+}
+
+.k-chip-image {
+     border-radius: 100%;
+     width: 25px;
+     height: 25px;
+}
+
+.fh-chip-image {
+     border-radius: 100%;
+     width: 25px;
+     height: 25px;   
+}
+
+.h-chip-image {
+     border-radius: 100%;
+     width: 25px;
+     height: 25px;    
+}
+
+.tw-chip-image {
+     border-radius: 100%;
+     width: 25px;
+     height: 25px;   
+}
+
+.f-chip-image {
+     border-radius: 100%;
+     width: 25px;
+     height: 25px;   
+}
+
+.o-chip-image {
+     border-radius: 100%;
+     width: 25px;
+     height: 25px;  
+}
+
+.add-pot {
+     -webkit-transition: bottom .5s linear;
+     -moz-transition: bottom .5s linear;
+     -ms-transition: bottom .5s linear;
+     -o-transition: bottom .5s linear;
+     transition: bottom .5s linear;
+}
+
+#high-scores-screen {
+    position: absolute;
+    width: 840px;
+    height: 800px;
+    left: 380px;
+    bottom: 70px;
+    background: rgba(0, 0, 0, .7);
+    display: none;
+}
+
+#high-scores-screen > h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#high-scores > div {
+    font-size: 24px;
+    margin: 37px 35px 0 35px;
+}
+
+.high-score > span {
+    height: 30px;
+    display: inline-block;
+}
+
+.high-score .place, #high-scores-labels span:nth-child(1) {
+    margin-left: 50px;
+    font-size: 24px;
+    width: 40px;
+}
+
+.high-score .player-name, #high-scores-labels span:nth-child(2) {
+    margin-left: 150px;
+    font-size: 24px;
+    width: 100px;
+}
+
+.high-score .wins, #high-scores-labels span:nth-child(3) {
+    margin-left: 200px;
+    font-size: 24px;
+    width: 100px;
+}
+
+#high-scores-labels span:nth-child(1), #high-scores-labels span:nth-child(2), #high-scores-labels span:nth-child(3) {
+    color: #ddd;
+}
