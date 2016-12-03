@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+	
+		<title>Poker</title>
+		
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<h1>Heads Up Poker</h1>
+		<div id="high-scores-screen">
+			<h2>High Scores</h2>
+			<div id="high-scores-labels">
+				<span>Rank</span>
+				<span>Name</span>
+				<span>Consecutive Wins</span>
+			</div>
+			<div id="high-scores">
+				<div id="first-place" class="high-score">
+					<span class=place></span>
+					<span class="player-name"></span>
+					<span class="wins">3</span>
+				</div>
+				<div id="second-place" class="high-score">
+					<span class=place></span>
+					<span class="player-name"></span>
+					<span class="wins"></span>
+				</div>
+				<div id="third-place" class="high-score">
+					<span class=place></span>
+					<span class="player-name"></span>
+					<span class="wins"></span>
+				</div>
+				<div id="fourth-place" class="high-score">
+					<span class=place></span>
+					<span class="player-name"></span>
+					<span class="wins"></span>
+				</div>
+				<div id="fifth-place" class="high-score">
+					<span class=place></span>
+					<span class="player-name"></span>
+					<span class="wins"></span>
+				</div>
+				<div id="sixth-place" class="high-score">
+					<span class=place></span>
+					<span class="player-name"></span>
+					<span class="wins"></span>
+				</div>
+				<div id="seventh-place" class="high-score">
+					<span class=place></span>
+					<span class="player-name"></span>
+					<span class="wins"></span>
+				</div>
+				<div id="eighth-place" class="high-score">
+					<span class=place></span>
+					<span class="player-name"></span>
+					<span class="wins"></span>
+				</div>
+				<div id="ninth-place" class="high-score">
+					<span class=place></span>
+					<span class="player-name"></span>
+					<span class="wins"></span>
+				</div>
+				<div ids="tenth-place" class="high-score">
+					<span class=place></span>
+					<span class="player-name"></span>
+					<span class="wins"></span>
+				</div>
+			</div>
+		</div>
+		<div id="customized-colors">
+			<div id="dark-wood" class="backgrounds"></div>
+			<div id="light-wood" class="backgrounds"></div>
+			<div id="green-table" class="colors"></div>
+			<div id="red-table" class="colors"></div>
+			<div id="blue-table" class="colors"></div>
+		</div>
+		<div id="table">
+			<div id="dealer" class="players">
+				<div class="player-info">
+					<p></p>
+					<h2>dealer</h2>
+				</div>
+				<div id="dealer-chips" class="chip-stack">
+					<div class="k-stack"></div>
+					<div class="fh-stack"></div>
+					<div class="h-stack"></div>
+					<div class="tw-stack"></div>
+					<div class="f-stack"></div>
+					<div class="o-stack"></div>
+				</div>
+				<div class="cards">
+					<img id="dealer-card1">
+					<img id="dealer-card2">
+				</div>
+				<div id="dealer-bet-chips" class="chip-stack">
+					<div class="k-stack"></div>
+					<div class="fh-stack"></div>
+					<div class="h-stack"></div>
+					<div class="tw-stack"></div>
+					<div class="f-stack"></div>
+					<div class="o-stack"></div>
+				</div>
+			</div>
+			<div id="pot">
+				<p></p>
+				<div id="pot-chips" class="chip-stack">
+					<div class="k-stack"></div>
+					<div class="fh-stack"></div>
+					<div class="h-stack"></div>
+					<div class="tw-stack"></div>
+					<div class="f-stack"></div>
+					<div class="o-stack"></div>
+				</div>
+				<div id="pot-chips2" class="chip-stack">
+					<div class="k-stack"></div>
+					<div class="fh-stack"></div>
+					<div class="h-stack"></div>
+					<div class="tw-stack"></div>
+					<div class="f-stack"></div>
+					<div class="o-stack"></div>
+				</div>
+			</div>
+			<div id="play-cards">
+				<div id="deck">
+					
+				</div>
+				<div id="com-cards">
+					<img id="card1">
+					<img id="card2">
+					<img id="card3">
+					<img id="card4">
+					<img id="card5">
+				</div>
+			</div>	
+			<p id="message"></p>	
+			
+			<div id="play-again-container">
+				<button id="next-hand">Next Hand</button>
+				<button id="yes">Play Again?</button>
+				<button id="no">No Thanks</button>
+			</div>
+			<div id="bet-options">
+				<form id="bet-form">
+					<input type="text" id="bet-input" name="name" value="" placeholder="how much:" />
+    				<input type="button" id="bet-submit" value="bet">
+				</form>
+				<button id="check">check</button>
+				<button id="bet">bet</button>
+				<button id="call">call</button>
+				<button id="raise">raise</button>
+				<button id="fold">fold</button>
+			</div>
+			<div id="user" class="players">	
+				<div class="cards">
+					<img id="user-card1">
+					<img id="user-card2">
+				</div>
+				<div id="user-bet-chips" class="chip-stack">
+					<div class="k-stack"></div>
+					<div class="fh-stack"></div>
+					<div class="h-stack"></div>
+					<div class="tw-stack"></div>
+					<div class="f-stack"></div>
+					<div class="o-stack"></div>
+				</div>
+				<div id="user-chips" class="chip-stack">
+					<div class="k-stack"></div>
+					<div class="fh-stack"></div>
+					<div class="h-stack"></div>
+					<div class="tw-stack"></div>
+					<div class="f-stack"></div>
+					<div class="o-stack"></div>
+				</div>		
+				<div class="player-info">
+					<h2></h2>
+					<p></p>
+				</div>
+			</div>
+		</div>
+		<div id="name-form-container">
+			<form id="name-form">
+				Enter your name: <input type="text" name="name" id="name-input">
+			</form>
+			<button id="name-submit">enter</button>
+		</div>
+
+		<!--jquery-->
+		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+		<!--firebase-->
+		<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+
+		<!--js-->
+		<script src="js/main.js"></script>
+
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+
+		<script src="js/AI-logic.js"></script>
+	</body>
+</html>
